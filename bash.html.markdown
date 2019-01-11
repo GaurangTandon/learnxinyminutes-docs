@@ -116,6 +116,9 @@ done
 echo {1..10} # => 1 2 3 4 5 6 7 8 9 10
 echo {a..z} # => a b c d e f g h i j k l m n o p q r s t u v w x y z
 # This will output the range from the start value to the end value
+# You can also specify custom increments like so:
+echo {a..z..2} # => a c e g i k m o q s u w y
+echo {9..5..-2} # goes in reverse! => 9 7 5
 
 # Built-in variables:
 # There are some useful built-in variables, like
@@ -191,7 +194,7 @@ then
 fi
 # Note that =~ only works within double [[ ]] square brackets,
 # which are subtly different from single [ ].
-# See http://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs for more on this.
+# See https://www.gnu.org/software/bash/manual/bashref.html#Conditional-Constructs for more on this.
 
 # Redefine command `ping` as alias to send only 5 packets
 alias ping='ping -c 5'
